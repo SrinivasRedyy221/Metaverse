@@ -1,11 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import { useClient } from 'next/client';
 
 import styles from '../styles';
 import { fadeIn } from '../utils/motion';
 
-const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
+const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => {
+  useClient();
+  return(
   <motion.div
     variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
     className={`relative ${
@@ -32,6 +35,7 @@ const ExploreCard = ({ id, imgUrl, title, index, active, handleClick }) => (
       </div>
     )}
   </motion.div>
-);
+  )
+}
 
 export default ExploreCard;
