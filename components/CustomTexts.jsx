@@ -2,6 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { textContainer, textVariant2 } from '../utils/motion';
+import { useClient } from 'next/client';
+// ... your other imports ...
+
+useClient(); // Mark the component as a client component
+
+// ... rest of your component code ...
+
 
 export const TypingText = ({ title, textStyles }) => (
   <motion.p

@@ -6,6 +6,13 @@ import styles from '../styles';
 import { newFeatures } from '../constants';
 import { NewFeatures, TitleText, TypingText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
+import { useClient } from 'next/client';
+// ... your other imports ...
+
+useClient(); // Mark the component as a client component
+
+// ... rest of your component code ...
+
 
 const WhatsNew = () => (
   <section className={`${styles.paddings} relative z-10`}>

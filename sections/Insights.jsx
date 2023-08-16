@@ -6,6 +6,13 @@ import styles from '../styles';
 import { insights } from '../constants';
 import { staggerContainer } from '../utils/motion';
 import { InsightCard, TitleText, TypingText } from '../components';
+import { useClient } from 'next/client';
+// ... your other imports ...
+
+useClient(); // Mark the component as a client component
+
+// ... rest of your component code ...
+
 
 const Insights = () => (
   <section className={`${styles.paddings} relative z-10`}>

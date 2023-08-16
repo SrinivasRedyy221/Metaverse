@@ -7,6 +7,13 @@ import styles from '../styles';
 import { exploreWorlds } from '../constants';
 import { staggerContainer } from '../utils/motion';
 import { ExploreCard, TitleText, TypingText } from '../components';
+import { useClient } from 'next/client';
+// ... your other imports ...
+
+useClient(); // Mark the component as a client component
+
+// ... rest of your component code ...
+
 
 const Explore = () => {
   const [active, setActive] = useState('world-2');

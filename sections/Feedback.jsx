@@ -4,6 +4,13 @@ import { motion } from 'framer-motion';
 
 import styles from '../styles';
 import { fadeIn, staggerContainer, zoomIn } from '../utils/motion';
+import { useClient } from 'next/client';
+// ... your other imports ...
+
+useClient(); // Mark the component as a client component
+
+// ... rest of your component code ...
+
 
 const Feedback = () => (
   <section className={`${styles.paddings}`}>
